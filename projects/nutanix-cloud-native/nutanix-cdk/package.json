@@ -1,13 +1,14 @@
 {
   "name": "nutanix-cdk",
   "version": "0.1.0",
-  "bin": {
-    "nutanix-cdk": "bin/nutanix-cdk.js"
-  },
+  "main": "dist/lib/app.js",
+  "types": "dist/types/app.d.ts",
   "scripts": {
+    "clean": "rm -rf dist && rm -rf cdk.out",
+    "lint": "eslint 'lib/**/*.ts' --fix",
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "jest",
+    "test": "npm run-script lint",
     "cdk": "cdk"
   },
   "devDependencies": {
