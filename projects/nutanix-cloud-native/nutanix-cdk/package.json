@@ -4,7 +4,7 @@
   "main": "dist/lib/app.js",
   "types": "dist/types/app.d.ts",
   "scripts": {
-    "clean": "rm -rf dist && rm -rf cdk.out",
+    "clean": "rm -rf dist && rm -rf build",
     "lint": "eslint 'lib/**/*.ts' --fix",
     "build": "tsc",
     "watch": "tsc -w",
