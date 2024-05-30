@@ -150,7 +150,7 @@ BUILD_RAW_TARGETS=$(foreach os,ubuntu-2004 ubuntu-2204 redhat-8 redhat-9,build-r
 BUILD_CLOUDSTACK_TARGETS=$(foreach os, redhat-8 redhat-9,build-cloudstack-$(os) $(call FAKE_IMAGE_PATH_FROM_OS_WITH_VER,cloudstack,$(os)) upload-artifacts-cloudstack-$(os))
 
 # nutanix node images
-BUILD_NUTANIX_TARGETS=packer/nutanix/nutanix.json $(foreach os,ubuntu-2004 ubuntu-2204 redhat-8 redhat-9,build-nutanix-$(os) $(call FAKE_IMAGE_PATH_FROM_OS_WITH_VER,nutanix,$(os)) upload-artifacts-nutanix-$(os))
+BUILD_NUTANIX_TARGETS=packer/nutanix/nutanix.json $(foreach os,ubuntu-2004 ubuntu-2204 redhat-8 redhat-9,build-nutanix-$(os) $(call FAKE_IMAGE_PATH_FROM_OS_WITH_VER,nutanix,$(os)))
 
 ifneq ($(BOTTLEROCKET_AMI_RELEASE_VERSION),null)
 	BUILD_AMI_TARGETS+=upload-bottlerocket-1-ami
